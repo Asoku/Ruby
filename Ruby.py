@@ -26,7 +26,7 @@ async def on_member_join(member):
     await client.send_message(server, fmt.format(member, server))
     
 @bot.command(pass_context=True)
-async def name(ctx):
+async def apply(ctx):
     """Gives you the link to apply."""
     await bot.say(" https://goo.gl/forms/y0rLWeuMvpjBzTf72")   
 
