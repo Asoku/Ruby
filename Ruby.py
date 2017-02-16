@@ -41,6 +41,7 @@ async def joined(member : discord.Member):
     await bot.say('{0.name} joined in {0.joined_at}'.format(member))
 
 @bot.command()
+@checks.is_owner()
 async def say(content):
 """Makes me say something :eyes:"""
 await bot.say(content)
@@ -53,7 +54,7 @@ async def cool(ctx):
       
 
 @bot.command(hidden=True, pass_context=True)
-#@checks.is_dev()
+@checks.is_owner()
 async def shutdown(ctx):
     """Shuts down the bot"""
     await bot.say("Goodbye.")
@@ -72,6 +73,7 @@ async def developers(ctx):
 
 
 @bot.command(pass_context=True)
+@checks.is_owner()
 async def sex(ctx):
     """You dont wanna know..."""
     await bot.say(":point_right: :ok_hand: **u like sex boi**")
