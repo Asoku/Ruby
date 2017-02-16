@@ -32,12 +32,6 @@ async def choose(*choices : str):
     """Chooses between multiple choices."""
     await bot.say(random.choice(choices))
     
-
-@bot.command()
-async def say(self):
-    """Repeats a message multiple times."""
-    await bot.say(content)
-
 @bot.command()
 async def joined(member : discord.Member):
     """Says when a member joined."""
