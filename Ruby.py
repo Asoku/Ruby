@@ -43,7 +43,10 @@ async def joined(member : discord.Member):
     """Says when a member joined."""
     await bot.say('{0.name} joined in {0.joined_at}'.format(member))
 
-
+@bot.command()
+async def say(content):
+"""Makes me say something :eyes:"""
+await bot.say(content)
 
 @bot.group(pass_context=True)
 async def cool(ctx):
