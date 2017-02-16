@@ -13,7 +13,7 @@ bot = commands.Bot(command_prefix='!', description=description)
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(game=discord.Game(name='async is the future'))
+    await bot.change_presence(game=discord.Game(name='async is the future, async is life'))
     print('Logged in as')
     print(bot.user.name)
     print(bot.user.id)
@@ -22,7 +22,7 @@ async def on_ready():
 @bot.event
 async def on_member_join(member):
     server = member.server
-    fmt = 'Welcome {0.mention} to {1.name}!'
+    fmt = 'Welcome {0.mention} to {1.name} We hope you like it here!'
     await client.send_message(server, fmt.format(member, server))
     
 @bot.command(pass_context=True)
@@ -64,12 +64,12 @@ async def shutdown(ctx):
 @bot.command(pass_context=True)
 async def name(ctx):
     """Tells you my name"""
-    await bot.say("My name is Ruby and I hate tomatoes")
+    await bot.say("My name is Ruby and I hate tomatoes.")
 
 @bot.command(pass_context=True)
 async def developers(ctx):
     """Lists the developers."""
-    await bot.say("[Adaptified, Open Space, Open Space]")
+    await bot.say("[Adaptified, Asoku, Open Space]")
 
 
 @bot.command(pass_context=True)
@@ -77,8 +77,13 @@ async def developers(ctx):
 async def sex(ctx):
     """You dont wanna know..."""
     await bot.say(":point_right: :ok_hand: **u like sex boi**")
+    
+    @bot.command(pass_context=True)
+    async def coolthing(ctx):
+        """Something cool***
+        await bot.say(":heart: I luv {0.mention}! :heart:")
 
         
 
        
-bot.run('MjgxNjk4MjQ0NjAwNTI4ODk3.C4bvcw.WSxJYN_EMTVIgibgnWgf0PHr4WQ')
+bot.run('MjgxNjk4MjQ0NjAwNTI4ODk3.C4bvcw.WSxJYN_EMTVIgibgnWgf0PHr4WQ') # Try not to put your token here, Adaptified. Please remove this and only have it on your desktop. Otherwise anyone else can use your bot.
