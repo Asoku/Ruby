@@ -25,7 +25,10 @@ async def on_member_join(member):
     fmt = 'Welcome {0.mention} to {1.name}!'
     await client.send_message(server, fmt.format(member, server))
     
-
+@bot.command(pass_context=True)
+async def name(ctx):
+    """Gives you the link to apply."""
+    await bot.say(" https://goo.gl/forms/y0rLWeuMvpjBzTf72")   
 
 @bot.command(description='For when you wanna settle the score some other way')
 async def choose(*choices : str):
