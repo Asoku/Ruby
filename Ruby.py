@@ -13,7 +13,7 @@ bot = commands.Bot(command_prefix='!', description=description)
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(game=discord.Game(name='async is the future, async is life'))
+    await bot.change_presence(game=discord.Game(name='async is the future'))
     print('Logged in as')
     print(bot.user.name)
     print(bot.user.id)
@@ -50,7 +50,7 @@ await bot.say(content)
 async def cool(ctx):
     """Tell someone that they're cool :)"""
     if ctx.invoked_subcommand is None:
-        await bot.say('No, {0.subcommand_passed} is cool <3'.format(ctx))
+        await bot.say('{0.subcommand_passed} is cool <3'.format(ctx))
       
 
 @bot.command(hidden=True, pass_context=True)
@@ -79,11 +79,11 @@ async def sex(ctx):
     await bot.say(":point_right: :ok_hand: **u like sex boi**")
     
     @bot.command(pass_context=True)
-    async def coolthing(ctx):
-        """Something cool***
-        await bot.say(":heart: I luv {0.mention}! :heart:")
+    async def love(ctx):
+        """Love someone***
+        await bot.say(":heart: I luv {1.mention}! :heart:")
 
         
 
        
-bot.run('MjgxNjk4MjQ0NjAwNTI4ODk3.C4bvcw.WSxJYN_EMTVIgibgnWgf0PHr4WQ') # Try not to put your token here, Adaptified. Please remove this and only have it on your desktop. Otherwise anyone else can use your bot.
+bot.run('') # Try not to put your token here, Adaptified. Please remove this and only have it on your desktop. Otherwise anyone else can use your bot.
